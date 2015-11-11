@@ -1,9 +1,9 @@
 #include <signal.h>
 #include <stdio.h>
 #include <unistd.h>
-int t;
-void* my_handler(int nsig);
 
+int t;
+void my_handler(int nsig);
 
 int main(void){
     signal(SIGALRM, my_handler);
@@ -16,10 +16,7 @@ int main(void){
     return 0;
 }
 
-
-
-
-void* my_handler(int nsig){
+void my_handler(int nsig){
     if (nsig == SIGALRM) {
         if (t > 0){
             t--;
@@ -30,6 +27,4 @@ void* my_handler(int nsig){
             printf("\a\a\a\a\a\n");
         }
     }
-    
-    return NULL;
 }
