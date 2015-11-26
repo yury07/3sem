@@ -102,7 +102,7 @@ void* mythread (void* arg){
     char line[MAGIC_CONST];
     int n;
     struct sembuf mybuf;
-    sprintf(line, "Wellcome! Our balance is %d¥", money);
+    sprintf(line, "∩༼˵☯‿☯˵༽つ¤=[]:::::> Our balance is %d¥", money);
     if((n = write(*newsockfd, line, strlen(line) + 1)) < 0)
     {
         perror(NULL);
@@ -123,11 +123,11 @@ void* mythread (void* arg){
             exit(-1);
         }
         if (money + count < 0) {
-            sprintf(line, "can't lend you that value\nbalance: %d¥", money);
+            sprintf(line, "┏༼ ◉ ╭╮ ◉༽┓ balance: %d¥", money);
         }
         else{
             money += count;
-            sprintf(line, "operation approved\nbalance: %d¥", money);
+            sprintf(line, "╰( ⁰ ਊ ⁰ )━☆ﾟ.*･｡ﾟ balance: %d¥", money);
         }
         
         mybuf.sem_op =  1;
