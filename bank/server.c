@@ -11,6 +11,11 @@
 #include <pthread.h>
 #include <unistd.h>
 #include <stdlib.h>
+
+/*
+ * FIXIT: видимо за MAGIC_CONST кроется MAX_MESSAGE_SIZE
+ * Раз уж взялись выность отдельные константы, то можно было бы вынести 10000, 51002, 5.
+ */
 #define MAGIC_CONST 1000
 
 int money;
